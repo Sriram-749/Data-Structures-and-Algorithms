@@ -7,7 +7,6 @@ public class InsertionSort {
             for(; j >= 0 && arr[j] > key; j--)
                 arr[j + 1] = arr[j]; 
             arr[j + 1] = key;
-            displayArray(arr);
         } 
     }
     static void displayArray(int[] arr) {
@@ -17,12 +16,15 @@ public class InsertionSort {
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the size of the array: ");
         int n = sc.nextInt();
         int[] arr = new int[n];
+        System.out.print("Enter the array elements: ");
         for(int i = 0; i < n; i++) 
             arr[i] = sc.nextInt();
         sc.close();
         insertionSort(n, arr);
-        // displayArray(arr);
+        System.out.print("Array after Insertion Sort: ");
+        displayArray(arr);
     }   
 }
